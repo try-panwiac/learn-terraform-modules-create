@@ -15,7 +15,7 @@ provider "aws" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.21.0"
+  version = "2.21.0" 
 
   name = var.vpc_name
   cidr = var.vpc_cidr
@@ -34,7 +34,7 @@ module "ec2_instances" {
   version = "2.12.0"
 
   name           = "my-ec2-cluster"
-  instance_count = 2
+  instance_count = 2 
 
   ami                    = "ami-0c5204531f799e0c6"
   instance_type          = "t2.micro"
@@ -50,7 +50,7 @@ module "ec2_instances" {
 module "website_s3_bucket" {
   source = "./modules/aws-s3-static-website-bucket"
 
-  bucket_name = "robin-test-dec-17-2019"
+  bucket_name = "robin-test-dec-17-2019" 
 
   tags = {
     Terraform   = "true"
