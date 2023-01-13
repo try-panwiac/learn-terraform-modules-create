@@ -57,3 +57,13 @@ module "website_s3_bucket" {
     Environment = "dev"
   }
 }
+  
+  
+  
+
+module "s3_new_bucket" {
+  source = "./modules/s3-example-module"
+
+    bucket_name = "blahblah"
+    enable_access_logs = false
+}
