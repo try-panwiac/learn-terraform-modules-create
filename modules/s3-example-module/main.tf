@@ -4,7 +4,7 @@ resource "aws_alb" "enabled" {
   subnets            = [aws_subnet.main.id]
 
   access_logs {
-    bucket  = var.bucket_name
+    bucket  = var.bucket_name 
     enabled = var.enable_access_logs
   }
 }
