@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws" 
   version = "2.21.0"
 
   name = var.vpc_name
@@ -30,7 +30,7 @@ module "vpc" {
 }
 
 module "ec2_instances" {
-  source  = "terraform-aws-modules/ec2-instance/aws"
+  source  = "terraform-aws-modules/ec2-instance/aws" 
   version = "2.12.0"
 
   name           = "my-ec2-cluster"
@@ -48,9 +48,9 @@ module "ec2_instances" {
 }
 
 module "website_s3_bucket" {
-  source = "./modules/aws-s3-static-website-bucket"
+  source = "./modules/aws-s3-static-website-bucket" 
 
-  bucket_name = "robin-test-dec-17-2019"
+  bucket_name = "robin-test-dec-17-2019" 
 
   tags = {
     Terraform   = "true"
